@@ -19,7 +19,7 @@ In order to change grid dimensions, go to lines 19 and 20 and enter the desired 
 
 ___
 Two files will be created, a bfs_result.ppm and a results.csv file. **.ppm** files should be converted to png files. An additional file can be used to generate plots in the csv file. By simply running 
-`plot_results.py`, it'll output runtime_comparison.png and a speedup_comparison.png plot graphs.
+`python3 plot_results.py`, it'll output runtime_comparison.png and a speedup_comparison.png plot graphs.
 
 It is necesary to make a directory called **outputs** and in that directory, make a file called `results.csv`. In that file on line 1, enter `rows,cols,cpu_time,cpu_frontier_time,gpu_frontier_time` and press enter, that way cursor is at the line two that way when you run the file, it'll append all new results to the second line and on.
 
