@@ -6,7 +6,7 @@ cpu_times = []
 cpu_frontier_times = []
 gpu_frontier_times = []
 
-with open("results.csv", "r") as file:
+with open("outputs/results.csv", "r") as file:
     reader = csv.DictReader(file)
 
     for row in reader:
@@ -29,7 +29,7 @@ plt.title("BFS Runtime Comparison")
 plt.legend()
 plt.grid(True)
 
-plt.savefig("runtime_comparison.png", dpi=300)
+plt.savefig("outputs/runtime_comparison.png", dpi=300)
 plt.show()
 
 gpu_speedup_vs_cpu = []
@@ -49,5 +49,5 @@ plt.title("GPU BFS Speedup")
 plt.legend()
 plt.grid(True)
 
-plt.savefig("speedup_comparison.png", dpi=300)
+plt.savefig("outputs/speedup_comparison.png", dpi=300)
 plt.show()

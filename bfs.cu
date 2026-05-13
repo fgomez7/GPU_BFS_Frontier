@@ -10,6 +10,8 @@
 #include <math.h>
 #include <time.h>
 #include <opencv2/opencv.hpp>
+#include <sys/stat.h>
+#include <sys/types.h>
 // #include <opencv4>
 
 using namespace std;
@@ -453,6 +455,7 @@ void saveGridPPM(const char* filename, int* grid, bool* visited, int* parent, in
 }
 
 int main(){
+    mkdir("outputs", 0777);
     // int grid[MAX_CELLS] = {
     //     0, 0, 0, 0, 1, 0,
     //     1, 1, 0, 0, 1, 0,
@@ -533,9 +536,9 @@ int main(){
     }
 
     if (found){
-        saveGridPPM("bfs_result.ppm", grid, visited, parent, ROWS, COLS, startIdx, goalIdx);
+        saveGridPPM("outputs/bfs_result.ppm", grid, visited, parent, ROWS, COLS, startIdx, goalIdx);
     
-        FILE* fp = fopen("results.csv", "a");
+        FILE* fp = fopen("outputs/results.csv", "a");
         // fprintf(fp, "rows,cols,cpu_time,cpu_frontier_time,gpu_frontier_time\n");
         fprintf(fp, "%d,%d,%f,%f,%f\n",
             ROWS,
