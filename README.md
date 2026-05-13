@@ -24,3 +24,5 @@ Two files will be created, a bfs_result.ppm and a results.csv file. **.ppm** fil
 It is necesary to make a directory called **outputs** and in that directory, make a file called `results.csv`. In that file on line 1, enter `rows,cols,cpu_time,cpu_frontier_time,gpu_frontier_time` and press enter, that way cursor is at the line two that way when you run the file, it'll append all new results to the second line and on.
 
 All outputs inluding .png, .ppm, .csv files will be made/modified in **outputs** directory
+___
+IT IS IMPORTANT TO NOTE THAT SOMETIMES THE PROGRAM WILL GENERATE A GRID IN WHICH START AND/OR END CELLS ARE BLOCKED. IT WON'T GENERATE RESULTS IF THE GRID HAS BLOCKING PATHS OR IF THERE WAS NO PATH FOUND. IN THE CASE THAT THE GRID DOES WORK AND AN EXISTING PATH IS FOUND, ALL RESULTS WILL BE GENERATED. 
