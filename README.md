@@ -18,5 +18,5 @@ In order to change grid dimensions, go to lines 19 and 20 and enter the desired 
 `#define COLS 8192`
 
 ___
-Two files will be created, a bfs_result.png and a results.csv file. An additional file can be used to generate plots in the csv file. By simply running 
+Two files will be created, a bfs_result.ppm and a results.csv file. **.ppm** files should be converted to png files. An additional file can be used to generate plots in the csv file. By simply running 
 `plot_results.py`, it'll output runtime_comparison.png and a speedup_comparison.png plot graphs.
